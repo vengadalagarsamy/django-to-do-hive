@@ -12,7 +12,7 @@ def home(request):
 
 @login_required
 def current(request):
-    todos = Todo.objects
+    todos = Todo.objects.all()
     return render(request, 'todo/current.html', {'todos':todos})
 
 # @login_required
